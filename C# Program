@@ -1,0 +1,53 @@
+using System;
+
+namespace Program2
+{
+    class Program
+    {
+        static void Main()
+        {
+            string your_years = "Ваш период жизни: ";
+
+            Console.Write("Ведите имя: ");
+            string user_name = Convert.ToString(Console.ReadLine());
+            Console.Write("Ведите ваш возраст: ");
+            short user_years = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Ведите ваще место проживание: ");
+            string user_location = Convert.ToString(Console.ReadLine());
+            Console.Write("Есть ли у вас имущество, Ведите да или нет: ");
+            string user_money = Convert.ToString(Console.ReadLine());
+
+            Console.WriteLine("\nИмя: {0}\nВозраст: {1}\nМесто проживание: {2}\n", user_name, user_years, user_location);
+
+            if (user_money == "Да" ||user_money == "да") {
+
+                Console.WriteLine("Иметься имущество: Да");
+            }
+            else if (user_money == "Нет" ||user_money == "нет") {
+
+                Console.WriteLine("Иметься имущество: Нет");
+            } else {
+
+                Console.WriteLine("Иметься имущество: Ошибка");
+            }
+
+
+            if (user_years < 4) {
+
+                Console.WriteLine(your_years + "Младенец");
+            } else if (user_years < 11) {
+
+                Console.WriteLine(your_years + "Ребёнок");
+            } else if (user_years < 19) {
+
+                Console.WriteLine(your_years + "Подросток");
+            } else if (user_years <  71) {
+
+                Console.WriteLine(your_years + "Зрослый");
+            } else {
+
+                Console.WriteLine(your_years + "Пожилой");
+            }      
+        }
+    }
+}
